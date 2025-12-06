@@ -1,68 +1,141 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>策划案</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="icon" href="images/favicon.png" type="image/png" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html style="scroll-behavior: smooth;"> <head>
+        <title>策划案</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />            
+        
+        <link rel="icon" href="images/favicon.png" type="image/png" />
+        
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Header -->
-			<header id="header" style="padding-bottom: -5em;">
-				<div style="text-align: center; margin-bottom: -2em; margin-top: -20px;">
-					<a href="index.html" class="image">
-						<img src="images/pic0_0.jpg" alt="" style="width: 70px; height: 70px; object-fit: cover; border-radius: 50%; border: 3px solid rgba(255, 255, 255, 0.2);" />
-					</a>
-				</div>
+        <style>
+            #sidebar-nav {
+                position: fixed;
+                left: 20px;          /* 距离左边 20px，如果你想放在右边，改成 right: 20px; */
+                top: 25%;            /* 垂直位置 */
+                width: 200px;
+                padding: 1.5em;
+                background: rgba(0, 0, 0, 0.5); /* 背景颜色，0.5是透明度 */
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                z-index: 10000;      /* 保证浮在最上面 */
+                backdrop-filter: blur(5px); /* 磨砂玻璃效果 */
+            }
 
-				<nav>
-					<ul style="margin-bottom: -2em;">
-						<li><a href="index.html">主页</a></li>
-						<li><a href="generic1.html" class="active">详情页</a></li>
-					</ul>
-				</nav>
-			</header>
+            #sidebar-nav h3 {
+                font-size: 1.1em;
+                margin-bottom: 1em;
+                color: #ffffff;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 0.5em;
+            }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+            #sidebar-nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic0_5.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
-					</section>
+            #sidebar-nav ul li {
+                margin-bottom: 0.8em;
+                font-size: 0.9em;
+            }
 
-			</div>
+            #sidebar-nav ul li a {
+                text-decoration: none;
+                border-bottom: none;
+                color: rgba(255, 255, 255, 0.6);
+                transition: color 0.2s ease;
+                display: block; /* 增加点击区域 */
+            }
+
+            #sidebar-nav ul li a:hover {
+                color: #ffffff; /* 鼠标悬停变亮 */
+                transform: translateX(5px); /* 悬停时稍微右移一点 */
+            }
+
+            /* 在屏幕宽度小于 1280px 时隐藏侧边栏（防止遮挡手机屏幕） */
+            @media screen and (max-width: 1280px) {
+                #sidebar-nav {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <div id="sidebar-nav">
+            <h3>导图</h3>
+            <ul>
+                <li><a href="#p1">算学道旅</a></li>
+                <li><a href="#p2">水滴环游记</a></li>
+                <li><a href="#p3">入梦者</a></li>
+                <li><a href="#p4">GNOSIS</a></li>
+            </ul>
+        </div>
+
+        <header id="header" style="padding-bottom: -5em;">
+            <div style="text-align: center; margin-bottom: -2em; margin-top: -20px;">
+                <a href="index.html" class="image">
+                    <img src="images/pic0_0.jpg" alt="" style="width: 70px; height: 70px; object-fit: cover; border-radius: 50%; border: 3px solid rgba(255, 255, 255, 0.2);" />
+                </a>
+            </div>
+
+            <nav>
+                <ul style="margin-bottom: -2em;">
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="generic1.html" class="active">详情页</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="wrapper">
+
+            <section id="main" class="wrapper">
+                <div class="inner">
+                    <h1 class="major">策划案</h1>
+
+                    <h2 id="p1">算学道旅</h2>
+                    <span class="image fit"><img src="images/pic1_1.jpg" alt="" /></span>
+                    <p>这是一个Unity3D+解谜类型的游戏，玩家将扮演一名算学爱好者，在一个充满数学谜题和挑战的虚拟世界中展开冒险。在这个项目中我负责完成游戏总体设计，落实并完成主场景中的中国风地编，实现角色3C与关卡内基本玩法，基于古代算学成就勾股定理、割圆术等四个符合背景的独立关卡。</p>
+                    <span class="image fit"><img src="images/pic2_1.jpg" alt="" /></span>
+
+                    <h2 id="p2">水滴环游记</h2>
+                    <span class="image fit"><img src="images/pic1_2.jpg" alt="" /></span>
+                    <p>这是一个Unity2D横版平台跳跃游戏，玩家将扮演一个水精灵，在各种充满挑战的关卡中冒险，体验水滴的奇妙旅程。在这个项目中我负责完成游戏总体设计，描述美术主题、落实并完成主场景中的关卡设计与搭建，基于水的三态变化设计多个符合背景的独立关卡。</p>
+                    <span class="image fit"><img src="images/pic2_2.jpg" alt="" /></span>
+
+                    <h2 id="p3">入梦者</h2>
+                    <span class="image fit"><img src="images/pic1_3.jpg" alt="" /></span>
+                    <p>这是一个Unity2D类推箱解谜冒险游戏，你将扮演入梦者进入梦境，运用你的智慧增殖生成玩家实体进行解密。在这个项目中我负责完成游戏总体设计，描述美术需求完成项目场景布设，配置关卡表与剧情，通过浅睡期与深睡期的转移进行玩家实体的生成，进而同时操控多个玩家对象进行关卡内的解密。</p>
+                    <span class="image fit"><img src="images/pic2_3.jpg" alt="" /></span>
+
+                    <h2 id="p4">GNOSIS</h2>
+                    <!--<span class="image fit"><img src="images/pic1_4.jpg" alt="" /></span>-->
+                    <p>（这里暂时还没有内容，后续可以添加图片或描述）</p> 
+                    
+
+                </div>
+            </section>
+        </div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
+			<footer id="footer" class="wrapper style1-alt" style="padding: 2em 0 1em 0;">
 				<div class="inner">
-					<ul class="menu">
+					<ul class="menu" style="margin-bottom: 0;">
 						<li>仅供个人简历用，不做任何商业用途.</li>
 					</ul>
 				</div>
 			</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
 
-	</body>
+    </body>
 </html>
