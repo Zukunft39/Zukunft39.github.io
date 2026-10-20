@@ -1,0 +1,122 @@
+% Adapted from Jake's Resume by Jake Gutierrez (MIT License).
+% Copyright (c) 2020 Jake Gutierrez
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+% Original: https://github.com/jakeryang/resume
+% Template: Jake's Resume, A4 single-column adaptation.
+% Compile with XeLaTeX. PDF delivered using ReportLab: no local LaTeX engine.
+\documentclass[a4paper,11pt]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}[BoldFont=SimHei]
+\usepackage[a4paper,left=15mm,right=15mm,top=11.3mm,bottom=11.3mm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright\raggedbottom\urlstyle{same}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\newcommand{\resumeSubheading}[3]{\textbf{#1}\hfill{\small #3}\\{\small\textit{#2}}\par\vspace{3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=13pt,label=\textbullet,itemsep=2.5pt,topsep=3pt,parsep=0pt]\fontsize{11pt}{15.5pt}\selectfont}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
+\newcommand{\resumeItem}[1]{\item #1}
+\hypersetup{pdfauthor={唐劭岩}}
+\begin{document}
+
+\begin{center}
+{\Huge\bfseries 唐劭岩}\\[3pt]
+{\small 技术实践 | 计算成像、AI 与三维交互}\\[3pt]
+{\small \href{mailto:3674603818@qq.com}{3674603818@qq.com} $|$ +86 153 0569 8620}\\[2pt]
+{\small \href{https://github.com/Zukunft39}{github.com/Zukunft39} $|$ \href{https://zukunft39.github.io}{zukunft39.github.io}}
+\end{center}\vspace{-6pt}
+\section{教育背景}
+\resumeSubheading{新加坡国立大学（NUS）}{计算机工程 · 硕士在读}{2026.08—2028.02（预计）}
+\resumeSubheading{电子科技大学}{软件工程 · 工学学士}{2022.09—2026.06}
+\section{技术项目与课程实验}
+\resumeSubheading{\href{https://github.com/Zukunft39/VRMicroscope}{VRMicroscope｜计算成像与 AI 辅助虚拟显微镜}}{Unity / C\# / Python · 教学仿真与交互实现}{2024.07—2026.10}
+\resumeItemListStart
+\resumeItem{实现可分离 radix-2 二维 FFT、Hann 加窗与对数幅度归一化，将样本纹理转换为可观察的空间频谱。}
+\resumeItem{以复频谱平移、双线性采样和瞳孔支撑范围模拟 SIM 频率混合，展示三方向频域覆盖，用于成像原理教学。}
+\resumeItem{搭建 Python HTTP 后端，接入 DeepSeek 与 Groq/Whisper；结合场景状态校验结构化响应，实现语音引导、组件定位与高亮。}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/denoising.html}{图像去噪与表征学习}}{NUS CEG5304 课程实验 · NumPy / PyTorch}{2026.08—2026.09}
+\resumeItemListStart
+\resumeItem{完成 NumPy 前反向传播与有限差分梯度检查，在 Fashion-MNIST 上实现卷积自编码器与去噪自编码器（AE/DAE）。}
+\resumeItem{比较干净、遮挡及不同高斯噪声条件下的重建，评估 16/64 维瓶颈与冻结编码器线性探针，分析噪声分布变化下的泛化差异。}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/reconstruction.html}{多视图三维重建与引擎展示}}{本科三人团队课设 · 个人负责采集、预处理与场景/显示适配}{约 2023.09—2025.01}
+\resumeItemListStart
+\resumeItem{参与多视图数据采集、图像预处理及 Unity 端网格体/点云展示；协作研究 PLY 导入，使用开源 NeRF 工具链的团队输出。}
+\resumeItem{负责重建目标选择与场景重建，使用 RealityCapture、Blender 整理环境资产，支持团队 UE/AirSim 仿真场景集成。}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/control.html}{仿真控制、记忆与安全约束}}{NUS CEG5306 课程实验 · Python / NumPy}{2026 年秋季}
+\resumeItemListStart
+\resumeItem{基于 gym-pybullet-drones 开展 PPO 悬停与目标控制实验，用轨迹和控制误差检查策略表现。}
+\resumeItem{实现二维 CBF 安全过滤，并对比记忆型 Q-learning、仅观测策略与 RNN REINFORCE，分析部分可观测任务中的记忆作用。}
+\resumeItemListEnd
+\section{技术能力}
+{\fontsize{11pt}{15.5pt}\selectfont
+\textbf{编程与工程:} Python、C\#；JavaScript（网页原型）；JSON、HTTP API、openpyxl、Git。\\[2pt]
+\textbf{成像与 AI:} FFT/频域分析、SIM 原理；NumPy、PyTorch（课程实验）；LLM/语音 API 集成。\\[2pt]
+\textbf{三维与引擎:} Unity；熟悉 3DGS、体素表示及 SfM/MVS 的课程概念；UE 蓝图用于策划配置。\\[2pt]
+}
+\newpage
+\begin{center}
+{\Huge\bfseries 唐劭岩}\\[3pt]
+{\small 策划与设计 | 游戏系统、关卡与生产工具}\\[3pt]
+{\small \href{mailto:3674603818@qq.com}{3674603818@qq.com} $|$ +86 153 0569 8620}\\[2pt]
+{\small \href{https://github.com/Zukunft39}{github.com/Zukunft39} $|$ \href{https://zukunft39.github.io}{zukunft39.github.io}}
+\end{center}\vspace{-6pt}
+\section{实习经历}
+\resumeSubheading{\href{https://zukunft39.github.io/projects/tencent.html}{腾讯｜《暗区突围》手游}}{产品一组实习生（游戏产品方向）}{2026.05—2026.08}
+\resumeItemListStart
+\resumeItem{参与活动系统配置、版本迭代与问题排查，累计完成 20+ 项功能需求、修复 90+ 项 Bug。}
+\resumeItem{为艾薇塔相关活动快速搭建网页推箱子 Demo，支持关卡编辑、行为验证与 JSON 导出，辅助方案评审及客户端配置。}
+\resumeItem{面向少前 2 联动局外活动，使用 Python、Tkinter、openpyxl 将结构化叙事内容转为节点及对白 Excel 配置，将原需数十小时的手工流程缩短至分钟级。}
+\resumeItem{支持源内容更新后的配置再生成、输入/输出覆盖保护与结果回读检查，整理工具说明及 Wiki 交接文档。}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/netease.html}{网易雷火｜《界外狂潮》}}{游戏系统策划实习生 · 战斗/系统方向}{2025.03—2025.07}
+\resumeItemListStart
+\resumeItem{基于项目组自研 Lua 工具链与 UE 原生蓝图，负责血姬角色行为状态机的策划侧配置。}
+\resumeItem{参与商业化资源配置、跨职能协作与效果验收，推动策划规则和角色表现落地。}
+\resumeItemListEnd
+\section{游戏设计项目}
+\resumeSubheading{\href{https://zukunft39.github.io/projects/water.html}{《水滴环游记》｜形态与资源驱动的解谜}}{团队游戏项目 · 总体流程、玩法与关卡配置/搭建}{2024.10—2024.11}
+\resumeItemListStart
+\resumeItem{围绕水的三态、形态能力与资源消耗组织玩法和关卡，把形态切换转化为路线选择与解谜条件。}
+\resumeItem{设计逐步引入交互物件的关卡流程，整理关卡配置与美术需求，协调场景搭建及反馈表现。}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/dream.html}{《入梦者》｜多实体同步解谜}}{团队 Game Jam 项目 · 游戏流程、关卡配置、场景与剧情协作}{2024.11}
+\resumeItemListStart
+\resumeItem{将浅睡/深睡、灵体/实体与多实体同步操作组织为解谜规则，通过空间关系与状态变化构建关卡。}
+\resumeItem{负责流程与关卡配置、场景布设及剧情/资源沟通，将分阶段规则转化为可搭建的关卡内容。}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/math.html}{《算学道旅》｜算学知识的交互化}}{Unity 3D 团队项目 · 总体设计、关卡/场景搭建与协作}{约 2024.02—2024.05}
+\resumeItemListStart
+\resumeItem{将勾股、割圆、鸡兔等算学内容转化为可操作的关卡目标，参与总体流程设计和场景搭建。}
+\resumeItem{协作衔接玩法、美术需求与交互反馈，让知识概念通过操作而非仅靠文字讲解被理解。}
+\resumeItemListEnd
+\section{策划与工具能力}
+{\fontsize{11pt}{15.5pt}\selectfont
+\textbf{策划设计:} 系统/玩法规则、关卡配置与场景搭建、角色状态机、资源配置、跨职能沟通与验收。\\[2pt]
+\textbf{原型与工具:} Unity、UE 原生蓝图、Lua 工具链配置；网页/JSON 原型、Python/Excel 自动化。\\[2pt]
+}
+\end{document}

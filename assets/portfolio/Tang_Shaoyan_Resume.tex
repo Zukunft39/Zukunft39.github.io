@@ -1,0 +1,122 @@
+% Adapted from Jake's Resume by Jake Gutierrez (MIT License).
+% Copyright (c) 2020 Jake Gutierrez
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+% Original: https://github.com/jakeryang/resume
+% Template: Jake's Resume, A4 single-column adaptation.
+% Compile with XeLaTeX. PDF delivered using ReportLab: no local LaTeX engine.
+\documentclass[a4paper,11pt]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}[BoldFont=SimHei]
+\usepackage[a4paper,left=15mm,right=15mm,top=11.3mm,bottom=11.3mm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright\raggedbottom\urlstyle{same}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\newcommand{\resumeSubheading}[3]{\textbf{#1}\hfill{\small #3}\\{\small\textit{#2}}\par\vspace{3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=13pt,label=\textbullet,itemsep=2.5pt,topsep=3pt,parsep=0pt]\fontsize{10.5pt}{13.2pt}\selectfont}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
+\newcommand{\resumeItem}[1]{\item #1}
+\hypersetup{pdfauthor={Tang Shaoyan}}
+\begin{document}
+
+\begin{center}
+{\Huge\bfseries Tang Shaoyan}\\[3pt]
+{\small Technical Practice | Computational Imaging, AI \& 3D Interaction}\\[3pt]
+{\small \href{mailto:3674603818@qq.com}{3674603818@qq.com} $|$ +86 153 0569 8620}\\[2pt]
+{\small \href{https://github.com/Zukunft39}{github.com/Zukunft39} $|$ \href{https://zukunft39.github.io}{zukunft39.github.io}}
+\end{center}\vspace{-6pt}
+\section{Education}
+\resumeSubheading{National University of Singapore (NUS)}{Master's Student, Computer Engineering}{Aug. 2026 - Feb. 2028 (Expected)}
+\resumeSubheading{University of Electronic Science and Technology of China}{Bachelor of Engineering in Software Engineering}{Sep. 2022 - Jun. 2026}
+\section{Technical Projects \& Coursework}
+\resumeSubheading{\href{https://github.com/Zukunft39/VRMicroscope}{VRMicroscope | Computational Imaging \& AI}}{Unity / C\# / Python | Educational VR simulation}{Jul. 2024 - Oct. 2026}
+\resumeItemListStart
+\resumeItem{Implemented a separable radix-2 2D FFT, Hann windowing and log-magnitude normalization to visualize spatial-frequency spectra from specimen textures.}
+\resumeItem{Modeled SIM frequency mixing with shifted complex spectra, bilinear sampling and pupil support; visualized coverage across three orientations for teaching.}
+\resumeItem{Built a Python HTTP backend with DeepSeek and Groq/Whisper APIs; validated structured responses against scene state for voice guidance, component localization and highlighting.}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/denoising.html}{Image Denoising \& Representation Learning}}{NUS CEG5304 coursework | NumPy / PyTorch}{Aug. 2026 - Sep. 2026}
+\resumeItemListStart
+\resumeItem{Implemented NumPy forward/backpropagation with finite-difference gradient checks, then convolutional autoencoders and denoising autoencoders on Fashion-MNIST.}
+\resumeItem{Compared clean, masked and Gaussian-noise reconstruction, 16/64-dimensional bottlenecks and frozen-encoder linear probes; analyzed generalization under noise distribution shifts.}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/reconstruction.html}{Multi-view Reconstruction \& Engine Integration}}{Three-person undergraduate team project | Capture, preprocessing and scene/display integration}{Approx. Sep. 2023 - Jan. 2025}
+\resumeItemListStart
+\resumeItem{Contributed image capture, preprocessing and Unity mesh/point-cloud visualization; investigated PLY import using team outputs from open-source NeRF tools.}
+\resumeItem{Selected reconstruction targets and prepared RealityCapture/Blender environment assets for team integration into UE/AirSim simulation scenes.}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/control.html}{Simulation Control, Memory \& Safety Constraints}}{NUS CEG5306 coursework | Python / NumPy}{Autumn 2026}
+\resumeItemListStart
+\resumeItem{Conducted PPO hover and target-control experiments in gym-pybullet-drones, inspecting trajectories and control errors rather than reward alone.}
+\resumeItem{Implemented a 2D CBF safety filter and compared memory-based Q-learning, observation-only policies and RNN REINFORCE in partially observable tasks.}
+\resumeItemListEnd
+\section{Technical Skills}
+{\fontsize{10.5pt}{13.2pt}\selectfont
+\textbf{Programming \& Tools:} Python, C\#; JavaScript (web prototypes); JSON, HTTP APIs, openpyxl, Git.\\[2pt]
+\textbf{Imaging \& AI:} FFT/Fourier analysis, SIM principles; NumPy/PyTorch (coursework); LLM/speech APIs.\\[2pt]
+\textbf{3D \& Engines:} Unity; familiar with 3DGS, voxel representations and SfM/MVS through coursework; UE Blueprints for design configuration.\\[2pt]
+}
+\newpage
+\begin{center}
+{\Huge\bfseries Tang Shaoyan}\\[3pt]
+{\small Planning \& Design | Game Systems, Levels \& Production Tools}\\[3pt]
+{\small \href{mailto:3674603818@qq.com}{3674603818@qq.com} $|$ +86 153 0569 8620}\\[2pt]
+{\small \href{https://github.com/Zukunft39}{github.com/Zukunft39} $|$ \href{https://zukunft39.github.io}{zukunft39.github.io}}
+\end{center}\vspace{-6pt}
+\section{Industry Experience}
+\resumeSubheading{\href{https://zukunft39.github.io/projects/tencent.html}{Tencent | Arena Breakout Mobile}}{Game Product Intern (Product Team 1)}{May 2026 - Aug. 2026}
+\resumeItemListStart
+\resumeItem{Maintained event-system configurations across production releases, completing 20+ functional requirements and resolving 90+ bugs through iteration and debugging.}
+\resumeItem{Rapidly built a browser-based Sokoban demo for an Evita-related event, with level editing, behavior checks and JSON export for design review and client configuration.}
+\resumeItem{Built a Python/Tkinter/openpyxl workflow for the Girls' Frontline 2 collaboration's out-of-match events, converting structured narrative content into node/dialogue Excel configurations and reducing manual work from tens of hours to minutes.}
+\resumeItem{Supported regeneration after source updates, protected inputs/existing outputs and checked generated workbooks; documented tools and handover workflows in the project Wiki.}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/netease.html}{NetEase ThunderFire | FragPunk}}{Game System Planning Intern | Combat / Systems}{Mar. 2025 - Jul. 2025}
+\resumeItemListStart
+\resumeItem{Configured a character's behavior state machine using the team's Lua toolchain and native UE Blueprints on the design side.}
+\resumeItem{Configured monetization resources and collaborated on implementation reviews and visual checks to translate design rules into in-game behavior.}
+\resumeItemListEnd
+\section{Game Design Projects}
+\resumeSubheading{\href{https://zukunft39.github.io/projects/water.html}{Water Adventure | State \& Resource Puzzles}}{Team game project | Game flow, gameplay and level configuration / scene assembly}{Oct. 2024 - Nov. 2024}
+\resumeItemListStart
+\resumeItem{Designed around three water states, form-specific abilities and resource costs, turning transformations into route choices and puzzle conditions.}
+\resumeItem{Organized levels that progressively introduce interactive objects; prepared level configurations and art requirements, coordinating scene assembly and feedback.}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/dream.html}{Dreamer | Synchronized Multi-entity Puzzles}}{Team Game Jam project | Game flow, levels, scenes and narrative coordination}{Nov. 2024}
+\resumeItemListStart
+\resumeItem{Organized light/deep sleep, spirit/physical forms and synchronized entity control into spatial puzzles driven by state changes.}
+\resumeItem{Configured game flow and levels, assembled scenes and coordinated narrative/resource needs to turn staged rules into playable content.}
+\resumeItemListEnd
+\resumeSubheading{\href{https://zukunft39.github.io/projects/math.html}{Mathematical Journey | Interactive Learning}}{Unity 3D team project | Overall design, level / scene assembly and coordination}{Approx. Feb. 2024 - May 2024}
+\resumeItemListStart
+\resumeItem{Translated traditional mathematics concepts into interactive puzzle objectives; contributed overall flow design and level/scene assembly.}
+\resumeItem{Coordinated gameplay, art requirements and interaction feedback so that concepts could be understood through player actions.}
+\resumeItemListEnd
+\section{Design \& Tools}
+{\fontsize{10.5pt}{13.2pt}\selectfont
+\textbf{Design:} Systems/gameplay rules, level configuration, scene assembly, state machines, resource configuration and cross-functional reviews.\\[2pt]
+\textbf{Prototyping:} Unity, native UE Blueprints, Lua toolchain configuration, web/JSON prototypes and Python/Excel automation.\\[2pt]
+}
+\end{document}

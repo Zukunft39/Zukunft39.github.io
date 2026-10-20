@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zukunft39.github.io/sitemap.xml
